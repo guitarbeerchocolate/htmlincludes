@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Page template</title>
+		<style>
+		header, footer
+		{
+			width:100%;
+		}
+		article, aside
+		{
+			float:left;
+			width:50%;
+		}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<article>This is my article.</article>
+		<aside></aside>
+		<footer></footer>
+		<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+		<script src="include.plugin.js"></script>
+		<script>
+		(function()
+		{
+			$('header').include('includes/header.html');
+  			$('aside').include('includes/sidebar.html');
+  			$('footer').include('includes/footer.html');
+		})();
+		</script>
+	</body>
+</html>
